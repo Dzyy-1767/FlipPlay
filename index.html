@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#10110d" />
+  <meta name="description"
+    content="FlipPlay — platform streaming anime, drama, manga, dan light novel dalam satu pengalaman." />
+  <title>FlipPlay — Semua Cerita, Satu Tempat</title>
+</head>
+
+<body class="min-w-80 bg-[#10110d] text-[#f4f4ed]">
+  <div id="scroll-progress"
+    class="fixed inset-x-0 top-0 z-[60] h-0.5 origin-left scale-x-0 bg-[#c8ff3d] will-change-transform"
+    aria-hidden="true"></div>
+
+  <header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#10110d]/90 backdrop-blur-xl">
+    <nav class="mx-auto flex h-20 max-w-[1440px] items-center justify-between px-5 sm:px-8 lg:px-14"
+      aria-label="Navigasi utama">
+      <a href="#beranda" class="flex items-center gap-2.5" aria-label="FlipPlay - Beranda">
+        <span class="grid size-9 place-items-center rounded-full bg-[#c8ff3d] text-[#10110d]">
+          <svg class="ml-0.5 size-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M8.5 6.2v11.6a1 1 0 0 0 1.52.85l9.14-5.8a1 1 0 0 0 0-1.7l-9.14-5.8a1 1 0 0 0-1.52.85Z"></path>
+          </svg>
+        </span>
+        <span class="text-xl font-bold tracking-[-0.04em]">FlipPlay</span>
+      </a>
+
+      <div class="hidden items-center gap-9 md:flex">
+        <a href="#beranda" class="text-sm font-medium text-white/65 transition-colors hover:text-white">Beranda</a>
+        <a href="#jelajahi" class="text-sm font-medium text-white/65 transition-colors hover:text-white">Ruang Kurasi</a>
+        <a href="#fitur" class="text-sm font-medium text-white/65 transition-colors hover:text-white">Fitur</a>
+        <a href="#kontak" class="text-sm font-medium text-white/65 transition-colors hover:text-white">Kontak</a>
+      </div>
+
+      <a href="#kontak"
+        class="hidden items-center gap-2 rounded-full bg-[#f4f4ed] px-5 py-2.5 text-sm font-bold text-[#10110d] transition-transform hover:-translate-y-0.5 md:flex">
+        Coba sekarang
+        <svg class="size-4" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M6 18 18 6M9 6h9v9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+      </a>
+
+      <button id="menu-toggle" type="button"
+        class="grid size-11 place-items-center rounded-full border border-white/15 md:hidden" aria-expanded="false"
+        aria-controls="mobile-menu" aria-label="Buka menu">
+        <span class="flex w-5 flex-col gap-1.5">
+          <span id="menu-line-one" class="h-px w-full bg-white transition-transform"></span>
+          <span id="menu-line-two" class="h-px w-full bg-white transition-transform"></span>
+        </span>
+      </button>
+    </nav>
+
+    <div id="mobile-menu" class="hidden border-t border-white/10 bg-[#10110d] px-5 py-5 md:hidden">
+      <div class="flex flex-col">
+        <a href="#beranda" class="border-b border-white/10 py-4 text-lg font-semibold">Beranda</a>
+        <a href="#jelajahi" class="border-b border-white/10 py-4 text-lg font-semibold">Ruang Kurasi</a>
+        <a href="#fitur" class="border-b border-white/10 py-4 text-lg font-semibold">Fitur</a>
+        <a href="#kontak" class="border-b border-white/10 py-4 text-lg font-semibold">Kontak</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="beranda" class="relative min-h-svh overflow-hidden pt-20">
+      <img
+        src="https://images.unsplash.com/photo-1789160378558-9a5b88b19fba?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=85&w=1800"
+        alt="Dua orang berjalan di gang kota dengan lampu neon"
+        class="hero-visual absolute inset-0 h-full w-full object-cover object-center opacity-65" />
+      <div
+        class="absolute inset-0 bg-[linear-gradient(90deg,rgba(16,17,13,.97)_0%,rgba(16,17,13,.68)_48%,rgba(16,17,13,.18)_100%)]">
+      </div>
+      <div class="absolute inset-0 bg-[linear-gradient(0deg,#10110d_0%,transparent_28%)]"></div>
+
+      <div
+        class="relative mx-auto flex min-h-[calc(100svh-5rem)] max-w-[1440px] flex-col justify-end px-5 pb-10 sm:px-8 sm:pb-12 lg:px-14">
+        <div class="grid items-end gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14">
+          <div class="reveal-item max-w-3xl" data-scroll-reveal>
+            <p class="mb-7 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.22em] text-[#c8ff3d]">
+              <span class="h-px w-10 bg-current"></span> Satu ruang. Banyak cerita.
+            </p>
+            <h1 class="text-[clamp(3.5rem,7vw,7rem)] font-bold leading-[0.88] tracking-[-0.07em]">
+              Tonton. Baca. <span class="text-[#c8ff3d]">Hanyut.</span>
+            </h1>
+            <div class="mt-8">
+              <p class="max-w-xl text-base leading-7 text-white/70 sm:text-lg">
+                Anime, drama, manga, dan light novel dalam satu pengalaman hiburan yang bergerak seirama denganmu.
+              </p>
+            </div>
+          </div>
+
+          <!-- Hero Marquee Poster Rail -->
+          <div class="reveal-item relative w-full overflow-hidden rounded-[2rem] border border-white/10 bg-black/40 p-4 backdrop-blur-md" data-scroll-reveal>
+            <div class="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-[#10110d] to-transparent"></div>
+            <div class="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-[#10110d] to-transparent"></div>
+            <div class="mb-3 flex items-center justify-between px-2">
+              <span class="flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-[#c8ff3d]">
+                <span class="size-1.5 animate-pulse rounded-full bg-[#c8ff3d]"></span> Live API Feed
+              </span>
+              <span class="text-xs text-white/40">Sedang tayang</span>
+            </div>
+            <div id="hero-marquee-track" class="hero-marquee flex w-max gap-3.5 py-1">
+              <!-- Poster dinamis dari API akan di-render di sini oleh JavaScript -->
+              <div class="h-44 w-32 animate-pulse rounded-2xl bg-white/10"></div>
+              <div class="h-44 w-32 animate-pulse rounded-2xl bg-white/10"></div>
+              <div class="h-44 w-32 animate-pulse rounded-2xl bg-white/10"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="jelajahi" class="scroll-mt-20 px-5 py-24 sm:px-8 lg:px-14 lg:py-32">
+      <div class="mx-auto max-w-[1440px]">
+        <div class="reveal-item grid gap-8 lg:grid-cols-[1fr_.75fr] lg:items-end" data-scroll-reveal>
+          <div>
+            <p class="mb-4 text-xs font-bold uppercase tracking-[0.22em] text-[#c8ff3d]">Curated by your mood</p>
+            <h2 class="text-5xl font-bold tracking-[-0.06em] sm:text-7xl">Ruang <span
+                class="text-[#c8ff3d]">Kurasi.</span></h2>
+          </div>
+          <p class="max-w-xl text-lg leading-8 text-white/55 lg:justify-self-end">
+            Temukan tontonan bukan hanya dari genre, tapi dari energi yang ingin kamu rasakan hari ini.
+          </p>
+        </div>
+
+        <div class="reveal-item mt-12 border-y border-white/15 py-6" data-scroll-reveal>
+          <div class="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
+            <label class="relative block w-full lg:max-w-md">
+              <span class="sr-only">Cari judul anime</span>
+              <svg class="pointer-events-none absolute left-5 top-1/2 size-5 -translate-y-1/2 text-white/40"
+                viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.8"></circle>
+                <path d="m16 16 4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+              </svg>
+              <input id="search-input" type="search" placeholder="Cari judul, misalnya Frieren..."
+                class="h-14 w-full rounded-full border border-white/15 bg-white/[0.04] pl-13 pr-5 text-sm outline-none transition placeholder:text-white/30 focus:border-[#c8ff3d] focus:bg-white/[0.07]" />
+            </label>
+
+            <div id="aura-filters" class="grid w-full grid-cols-2 gap-2 sm:flex sm:w-auto sm:flex-wrap"
+              aria-label="Filter berdasarkan Aura">
+              <button type="button" data-aura="all"
+                class="aura-button min-w-0 rounded-full border px-3 py-3 text-xs font-semibold transition sm:px-5 sm:text-sm"
+                aria-pressed="true">Semua Cerita</button>
+              <button type="button" data-aura="high-energy"
+                class="aura-button min-w-0 rounded-full border px-3 py-3 text-xs font-semibold transition sm:px-5 sm:text-sm"
+                aria-pressed="false">Penuh Aksi</button>
+              <button type="button" data-aura="melancholy"
+                class="aura-button min-w-0 rounded-full border px-3 py-3 text-xs font-semibold transition sm:px-5 sm:text-sm"
+                aria-pressed="false">Melankolis</button>
+              <button type="button" data-aura="binge-mode"
+                class="aura-button min-w-0 rounded-full border px-3 py-3 text-xs font-semibold transition sm:px-5 sm:text-sm"
+                aria-pressed="false">Maraton Seru</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between py-7">
+          <p id="result-count" class="font-mono text-xs uppercase tracking-[0.16em] text-white/40" aria-live="polite">
+            Tuning the signal...</p>
+          <p id="data-source" class="hidden text-xs text-white/30 sm:block"></p>
+        </div>
+
+        <div id="catalog-status"></div>
+        <div id="anime-grid"
+          class="grid grid-cols-2 gap-x-3 gap-y-9 sm:grid-cols-3 sm:gap-x-5 lg:grid-cols-4 xl:grid-cols-5"
+          aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section id="fitur" class="scroll-mt-20 bg-[#c8ff3d] px-5 py-24 text-[#10110d] sm:px-8 lg:px-14 lg:py-32">
+      <div class="mx-auto max-w-[1440px]">
+        <div class="reveal-item grid gap-14 lg:grid-cols-[1.15fr_.85fr]" data-scroll-reveal>
+          <div>
+            <p class="mb-5 text-xs font-bold uppercase tracking-[0.22em]">Dirancang untuk terus mengalir</p>
+            <h2 class="max-w-3xl text-5xl font-bold leading-[0.95] tracking-[-0.06em] sm:text-7xl">Satu akun untuk semua
+              duniamu.</h2>
+          </div>
+          <ol class="flex flex-col justify-end gap-2">
+            <li class="flex items-center justify-between border-t border-black/25 py-4"><span
+                class="flex items-center gap-4 font-semibold"><span class="font-mono text-xs opacity-50">01</span>
+                Lanjutkan dari posisi terakhir</span><span aria-hidden="true">›</span></li>
+            <li class="flex items-center justify-between border-t border-black/25 py-4"><span
+                class="flex items-center gap-4 font-semibold"><span class="font-mono text-xs opacity-50">02</span>
+                Rekomendasi lintas format</span><span aria-hidden="true">›</span></li>
+            <li class="flex items-center justify-between border-t border-black/25 py-4"><span
+                class="flex items-center gap-4 font-semibold"><span class="font-mono text-xs opacity-50">03</span> Mode
+                gelap yang nyaman</span><span aria-hidden="true">›</span></li>
+            <li class="flex items-center justify-between border-t border-black/25 py-4"><span
+                class="flex items-center gap-4 font-semibold"><span class="font-mono text-xs opacity-50">04</span> Akses
+                di semua perangkat</span><span aria-hidden="true">›</span></li>
+          </ol>
+        </div>
+
+        <article
+          class="reveal-item mt-20 grid overflow-hidden border border-black/20 bg-[#171812] sm:grid-cols-[1.2fr_.8fr]"
+          data-scroll-reveal>
+          <div class="relative min-h-[380px] overflow-hidden sm:min-h-[520px]">
+            <img
+              src="https://images.unsplash.com/photo-1766465738586-b75e63349e30?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=85&w=1200"
+              alt="Jalan kota dengan pantulan lampu neon di malam hari"
+              class="absolute inset-0 h-full w-full object-cover opacity-80" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 p-7 text-white sm:p-10">
+              <span
+                class="rounded-full border border-white/40 px-3 py-1 text-xs font-bold uppercase tracking-widest">Sedang
+                trending</span>
+              <h3 class="mt-5 text-3xl font-bold tracking-[-0.04em] sm:text-5xl">Midnight Echo</h3>
+              <p class="mt-2 text-sm text-white/65">S1 • E08 — Suara dari masa lalu</p>
+            </div>
+          </div>
+          <div class="flex flex-col justify-between p-7 text-white sm:p-10">
+            <div class="flex items-center justify-between"><span
+                class="text-xs font-bold uppercase tracking-[0.2em] text-[#c8ff3d]">Lanjutkan</span><span
+                class="text-sm text-white/45">18:42 / 24:10</span></div>
+            <div class="my-14">
+              <div class="mx-auto grid size-28 place-items-center rounded-full border border-white/20 bg-white/5"><span
+                  class="grid size-16 place-items-center rounded-full bg-[#c8ff3d] text-black"><svg class="ml-1 size-7"
+                    viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M8.5 6.2v11.6a1 1 0 0 0 1.52.85l9.14-5.8a1 1 0 0 0 0-1.7l-9.14-5.8a1 1 0 0 0-1.52.85Z">
+                    </path>
+                  </svg></span></div>
+            </div>
+            <div>
+              <div class="h-1 overflow-hidden rounded-full bg-white/15">
+                <div class="h-full w-[78%] bg-[#c8ff3d]"></div>
+              </div>
+              <p class="mt-5 text-sm leading-6 text-white/55">Mulai di ponsel, lanjutkan di laptop. Ceritamu selalu
+                menunggumu.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="kontak" class="scroll-mt-20 px-5 py-24 sm:px-8 lg:px-14 lg:py-32">
+      <div class="mx-auto grid max-w-[1440px] gap-16 lg:grid-cols-[.8fr_1.2fr]">
+        <div class="reveal-item" data-scroll-reveal>
+          <p class="mb-5 text-xs font-bold uppercase tracking-[0.22em] text-[#c8ff3d]">Hubungi kami</p>
+          <h2 class="text-5xl font-bold leading-[0.95] tracking-[-0.06em] sm:text-7xl">Punya cerita untuk dibagikan?
+          </h2>
+          <p class="mt-7 max-w-md leading-7 text-white/55">Kami ingin mendengarnya. Kirim pertanyaan, ide kolaborasi,
+            atau sekadar sapa tim FlipPlay.</p>
+          <a href="mailto:hello@flipplay.id"
+            class="mt-10 inline-flex items-center gap-2 border-b border-[#c8ff3d] pb-1 font-semibold text-[#c8ff3d]">hello@flipplay.id
+            <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <form id="contact-form" class="reveal-item grid gap-x-6 gap-y-8 sm:grid-cols-2" data-scroll-reveal>
+          <label class="block"><span class="mb-3 block text-sm font-semibold">Nama lengkap</span><input required
+              name="name" type="text" autocomplete="name" placeholder="Nama kamu"
+              class="w-full border-b border-white/20 bg-transparent py-4 text-base outline-none transition-colors placeholder:text-white/25 focus:border-[#c8ff3d]" /></label>
+          <label class="block"><span class="mb-3 block text-sm font-semibold">Email</span><input required name="email"
+              type="email" autocomplete="email" placeholder="kamu@email.com"
+              class="w-full border-b border-white/20 bg-transparent py-4 text-base outline-none transition-colors placeholder:text-white/25 focus:border-[#c8ff3d]" /></label>
+          <label class="block sm:col-span-2"><span class="mb-3 block text-sm font-semibold">Topik</span><select required
+              name="topic"
+              class="w-full border-b border-white/20 bg-[#10110d] py-4 text-base text-white/70 outline-none transition-colors focus:border-[#c8ff3d]">
+              <option value="" disabled selected>Pilih topik pesan</option>
+              <option value="general">Pertanyaan umum</option>
+              <option value="partnership">Kolaborasi & kemitraan</option>
+              <option value="feedback">Saran produk</option>
+            </select></label>
+          <label class="block sm:col-span-2"><span class="mb-3 block text-sm font-semibold">Pesan</span><textarea
+              required name="message" rows="4" placeholder="Ceritakan lebih banyak..."
+              class="w-full resize-none border-b border-white/20 bg-transparent py-4 text-base outline-none transition-colors placeholder:text-white/25 focus:border-[#c8ff3d]"></textarea></label>
+          <div class="flex flex-col gap-4 sm:col-span-2 sm:flex-row sm:items-center sm:justify-between">
+            <p id="form-status" class="text-sm text-[#c8ff3d] opacity-0 transition-opacity" role="status">Pesan
+              diterima. Kami akan segera menghubungimu.</p>
+            <button type="submit"
+              class="inline-flex items-center justify-center gap-3 rounded-full bg-[#c8ff3d] px-7 py-4 font-bold text-[#10110d] transition-transform hover:-translate-y-1">Kirim
+              pesan <span aria-hidden="true">↗</span></button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/10 px-5 pb-8 pt-16 sm:px-8 lg:px-14">
+    <div class="mx-auto max-w-[1440px]">
+      <div class="flex flex-col gap-10 pb-14 sm:flex-row sm:items-end sm:justify-between">
+        <div><a href="#beranda" class="text-2xl font-bold tracking-[-0.04em]">FlipPlay</a>
+          <p class="mt-5 max-w-xs text-sm leading-6 text-white/45">Semua cerita yang kamu suka, dalam satu pengalaman
+            tanpa jeda.</p>
+        </div>
+        <nav class="flex flex-wrap gap-x-8 gap-y-4 text-sm font-medium text-white/60" aria-label="Navigasi footer"><a
+            href="#jelajahi" class="hover:text-white">Ruang Kurasi</a><a href="#fitur" class="hover:text-white">Fitur</a><a
+            href="#kontak" class="hover:text-white">Kontak</a><a href="#beranda" class="hover:text-white">Privasi</a>
+        </nav>
+      </div>
+      <div
+        class="flex flex-col gap-3 border-t border-white/10 pt-7 text-xs text-white/35 sm:flex-row sm:justify-between">
+        <p>© 2025 FlipPlay. Semua hak dilindungi.</p>
+        <p>Dibuat untuk pencinta cerita di Indonesia.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
