@@ -13,6 +13,24 @@ FlipPlay adalah prototipe katalog hiburan dengan antarmuka responsif untuk menje
 - Tampilan skeleton saat memuat, pesan saat data gagal dimuat, dan tombol untuk mencoba lagi.
 - Animasi yang menghormati preferensi `prefers-reduced-motion`.
 
+## Dokumentasi tampilan
+
+### Beranda
+
+![Tampilan beranda FlipPlay](docs/screenshots/beranda.png)
+
+### Ruang kurasi
+
+![Tampilan katalog dan filter anime](docs/screenshots/katalog.png)
+
+### Fitur
+
+![Tampilan bagian fitur](docs/screenshots/fitur.png)
+
+### Kontak
+
+![Tampilan bagian kontak](docs/screenshots/kontak.png)
+
 ## Teknologi
 
 - HTML, JavaScript, dan CSS
